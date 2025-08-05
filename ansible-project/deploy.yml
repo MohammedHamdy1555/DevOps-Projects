@@ -1,0 +1,6 @@
+---
+- name: Deploy Note App
+  hosts: web
+  become: yes
+  roles:
+    - noteapp

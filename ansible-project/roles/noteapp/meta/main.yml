@@ -1,0 +1,21 @@
+galaxy_info:
+  author: Mohammed Hamdy
+  description: A role to deploy a Flask + SQLite note-taking app
+  company: DEPI
+  license: MIT
+  min_ansible_version: 2.9
+
+  platforms:
+    - name: EL
+      versions:
+        - 8
+        - 9
+
+  galaxy_tags:
+    - flask
+    - sqlite
+    - webapp
+    - ansible
+    - deployment
+
+dependencies: []
