@@ -1,0 +1,20 @@
+100.24.50.150 ansible_user=ec2-user ansible_ssh_private_key_file=/home/ec2-user/ansible-project/ansible.pem ansible_python_interpreter=/usr/bin/python3.9
+34.229.192.218 ansible_user=ec2-user ansible_ssh_private_key_file=/home/ec2-user/ansible-project/ansible.pem ansible_python_interpreter=/usr/bin/python3.9
+
+
+
+[web]
+100.24.50.150 ansible_user=ec2-user ansible_ssh_private_key_file=/home/ec2-user/ansible-project/ansible.pem ansible_python_interpreter=/usr/bin/python3.9
+
+
+
+[db]
+34.229.192.218 ansible_user=ec2-user ansible_ssh_private_key_file=/home/ec2-user/ansible-project/ansible.pem ansible_python_interpreter=/usr/bin/python3.9
+
+
+
+[app:children]
+
+db
+web
+
