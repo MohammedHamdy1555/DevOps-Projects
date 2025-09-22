@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes App</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #333; }
+        form { margin-bottom: 20px; }
+        textarea { width: 300px; height: 80px; }
+        button { margin-top: 10px; padding: 5px 10px; }
+        .note { border-bottom: 1px solid #ddd; padding: 10px 0; }
+        .timestamp { font-size: 12px; color: gray; }
+    </style>
+</head>
+<body>
+    <h1>📝 Notes App</h1>
+
+    <form method="POST" action="/">
+        <textarea name="content" placeholder="Write your note here..."></textarea><br>
+        <button type="submit">Save Note</button>
+    </form>
+
+    <h2>Notes</h2>
+    {% for note in notes %}
+        <div class="note">
+            <div class="timestamp">🕒 {{ note.created_at }}</div>
+            <div class="content">📌 {{ note.content }}</div>
+        </div>
+    {% else %}
+        <p>No notes yet.</p>
+    {% endfor %}
+</body>
+</html>
